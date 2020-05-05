@@ -16,12 +16,14 @@ pip install -U selenium
 
 #### VERIFICAR NÚMERO ISBN DO LIVRO
 Existem duas formas:
-1. Através do cengagebrasil.vitalsource.com/#/books/`9788522124015`
+1. Através da própria url: cengagebrasil.vitalsource.com/#/books/`9788522124015`
 2. Por meio da página do livro OU internet:
+
 ![1](img/isbn.jpg)
 
 #### NÚMERO DA PÁGINA INICIAL
-Abra o ebook e com auxilio do navegador inspecione a página:
+Abra o ebook e com auxilio do navegador inspecione a página e encontre o iframe#epub-content:
+
 ![2](img/page.jpg)
 
 *Veja que ali também é possível visualizar o ISBN*
