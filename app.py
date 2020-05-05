@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 
 
-def login_and_save_urls(email, senha, isbn, nome_livro, total_paginas):
+def login_and_save_urls(email, senha, isbn, nome_livro, pagina_inicial, total_paginas):
     browser = webdriver.Firefox()
     
     # login
@@ -26,32 +26,26 @@ def login_and_save_urls(email, senha, isbn, nome_livro, total_paginas):
         btn_login = browser.find_element_by_xpath("//*[@class='Button__buttonContent-bIKrMk KaEKF']")
         btn_login.submit()
 
-    # listar urls de páginas
-    urls = []
-    for page in range(0, total_paginas+1):
-        url_1 = 'https://jigsaw.vitalsource.com/books/'+str(isbn)+'/cfi/'
-        url_2 = str(page)+'!/4/2@100:0.00?jigsaw_brand=cengageLearningEditoresSaDeCvBrasil&dps_on=false&xdm_e=httpsAFFcengagebrasil.vitalsource.com&xdm_c=default6767&xdm_p=1'
-        url = url_1 + url_2
-        urls.append(url)
-
     # abrir páginas e salvar urls da imagem
-    time.sleep(5)
+    time.sleep(3)
     browser.execute_script("window.open()")
     browser.switch_to.window(browser.window_handles[1])
 
     src_img = []
-    for src in range(0, len(urls)):
-        browser.get(urls[src])
-        time.sleep(6)
+    for page in range(pagina_inicial, total_paginas+1):
+
+        url = 'https://jigsaw.vitalsource.com/books/'+str(isbn)+'/pages/'+str(page)
+        browser.get(url)
 
         # NÃO ESTÁ RETORNANDO SRC
+        time.sleep(2)
         element_src = browser.find_element_by_xpath("html//body//div[@id='epub-container']//iframe[@id='epub-content']//html//body[@class='pbk']//img[@id='pbk-page']")
         print(element_src)
 
         src_img.append(element_src)
 
     # funcao download imagens
-
+    return src_img
 
 def main():
     email = str(input('Email: '))
@@ -59,10 +53,10 @@ def main():
     isbn = int(input('ISBN: '))
     nome_livro = str(input('Nome do livro: '))  # criar pasta para salvar imagem com este nome
     pagina_inicial = 351539662  # fin.element_by ...
-    total_paginas = int(input('Quantidade de páginas'))
-    pagina_final = int(pagina_inicial + total_paginas)
+    total_paginas = 10
+    total_paginas = (pagina_inicial + total_paginas)
 
-    login_and_save_urls(email, senha, isbn, nome_livro, total_paginas)
+    print(login_and_save_urls(email, senha, isbn, nome_livro, pagina_inicial, total_paginas))
 
 
 main()
