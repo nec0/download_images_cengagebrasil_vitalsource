@@ -1,6 +1,8 @@
 ## Download de imagens de páginas de ebook
 Automatize o download de imagens de ebooks do cengagebrasil/vitalsource com o framework [selenium](https://selenium-python.readthedocs.io/) e python
 
+*Desenvolvido com o intuito de estudo, recomendamos que não comercialize ou matenha cópias não autorizadas de livros*
+
 - - -
 ### O QUE FAZ?
 - [x] Login e download de imagns
@@ -32,6 +34,5 @@ Abra o ebook e com auxilio do navegador inspecione a página e encontre o iframe
 Selecione todas as imagens, clique na primeira(capa) imagem com o botão direito e Imprimir, configure e salve como pdf.
 
 - - -
-*Desenvolvido com o intuito de estudo, recomendamos que não comercialize ou matenha cópias não autorizadas de livros*
 
 *Sinta-se livre para contribuir!*
