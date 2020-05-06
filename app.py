@@ -86,6 +86,7 @@ def main():
             "[3] 2000 x 2664\n"
             "[4] 2000 x 2888\n")
 
+        print("Recomenamos a opção [4]")
         res = int(input("Quais resolução das páginas? "))
 
         largura, altura = 0, 0
