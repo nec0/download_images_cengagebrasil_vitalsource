@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 def url_paginas(isbn, pagina_inicial, pagina_final):
     paginas = []
     book = f"https://jigsaw.vitalsource.com/books/{isbn}"
-    for page in range(pagina_inicial, pagina_final):
+    for page in range(pagina_inicial, pagina_final+1):
         url = f"{book}/pages/{page}"
         paginas.append(url)
 

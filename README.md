@@ -28,6 +28,8 @@ Abra o ebook e com auxilio do navegador inspecione a página e encontre o iframe
 
 *Veja que ali também é possível visualizar o ISBN*
 
+### Utilize o próprio recurso(Imprimir) do Windows para transformar as imagens em PDF
+Selecione todas as imagens, clique na primeira(capa) imagem com o botão direito e Imprimir, configure e salve como pdf.
 
 - - -
 *Desenvolvido com o intuito de estudo, recomendamos que não comercialize ou matenha cópias não autorizadas de livros*
