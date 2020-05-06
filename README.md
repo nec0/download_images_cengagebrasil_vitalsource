@@ -33,6 +33,9 @@ Abra o ebook e com auxilio do navegador inspecione a página e encontre o iframe
 ### Utilize o próprio recurso(Imprimir) do Windows para transformar as imagens em PDF
 Selecione todas as imagens, clique na primeira(capa) imagem com o botão direito e Imprimir, configure e salve como pdf.
 
+### Salvando várias vezes a mesma página(capa/contracapa/etc)
+Recomendo colocar um número maior de páginas, o dobro, e verificar com um tempo se já baixou a ultima página.
+
 - - -
 
 *Sinta-se livre para contribuir!*
