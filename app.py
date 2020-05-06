@@ -80,20 +80,20 @@ def main():
 
         print("\nAS PÁGINAS TEM RESOLUÇÕES DIFERENTES A DEPENDER DO LIVRO, REALIZE TESTES OU VERIFIQUE PELO HTML")
         print(
-            "RESOLUÇÕES:\n\n"
+            "RESOLUÇÕES:\n"
             "[1] 800 x 1065\n"
             "[2] 1600 x 2131\n"
             "[3] 2000 x 2664\n"
             "[4] 2000 x 2888\n")
 
         print("Recomenamos a opção [4]")
-        res = int(input("Quais resolução das páginas? "))
+        res = int(input("Qual resolução deseja?\nRecomendo a [4]"))
 
         largura, altura = 0, 0
         if res == 1:
             largura, altura = 800, 1065
         elif res == 2:
-            largura, altura = 1600, 2131
+            largura, altura = 1600, 2130
         elif res == 3:
             largura, altura = 2000, 2664
         elif res == 4:
